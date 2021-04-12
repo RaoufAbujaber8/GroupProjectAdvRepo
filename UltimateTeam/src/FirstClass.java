@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.JButton;
-
+// Magableh
 public class FirstClass {
 
 	private JFrame frame;
