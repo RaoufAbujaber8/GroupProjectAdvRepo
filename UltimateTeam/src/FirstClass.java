@@ -26,7 +26,7 @@ public class FirstClass {
 	JTextField searchBar;
 	
 	public void homePage() {
-		ImageIcon x = new ImageIcon("C:\\Users\\pc\\eclipse-workspace\\SecondTerm\\src\\background.jpg");
+		ImageIcon x = new ImageIcon("/Users/raoufabujaber/git/UltimateTeam/UltimateTeam/src/background.jpg");
 		Image image = x.getImage();
 		Image newimg = image.getScaledInstance(1200, 900,  java.awt.Image.SCALE_SMOOTH);
 		x = new ImageIcon(newimg);
@@ -71,7 +71,7 @@ public class FirstClass {
 		//home page foreground pic
 		JLabel lblNewLabel_2 = new JLabel("New label");
 		lblNewLabel_2.setBounds(26, 13, 692, 360);
-		ImageIcon x = new ImageIcon("C:\\Users\\pc\\eclipse-workspace\\SecondTerm\\src\\home img.jpg");
+		ImageIcon x = new ImageIcon("/Users/raoufabujaber/git/UltimateTeam/UltimateTeam/src/home img.jpg");
 		Image image = x.getImage();
 		Image newimg = image.getScaledInstance(700, 400,  java.awt.Image.SCALE_SMOOTH);
 		x = new ImageIcon(newimg);
@@ -80,7 +80,7 @@ public class FirstClass {
 		
 		//home page background pic
 		pic = new JLabel("");
-		pic.setIcon(new ImageIcon("C:\\Users\\pc\\Downloads\\background.jpg"));
+		pic.setIcon(new ImageIcon("/Users/raoufabujaber/git/UltimateTeam/UltimateTeam/src/background.jpg"));
 		pic.setBounds(0, 0, 744, 417);
 		frame.getContentPane().add(pic);
 		
@@ -89,7 +89,7 @@ public class FirstClass {
 		squad.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				JFrame x = new JFrame();
-				ImageIcon pic1 = new ImageIcon("C:\\Users\\pc\\eclipse-workspace\\SecondTerm\\src\\formation.png");
+				ImageIcon pic1 = new ImageIcon("/Users/raoufabujaber/git/UltimateTeam/UltimateTeam/src/formation.png");
 				Image image = pic1.getImage();
 				Image newimg = image.getScaledInstance(750, 650,  java.awt.Image.SCALE_SMOOTH);
 				pic1 = new ImageIcon(newimg);
@@ -125,7 +125,7 @@ public class FirstClass {
 				frame.getContentPane().add(lblNewLabel);
 				
 				JLabel lblNewLabel_1 = new JLabel("New label");
-				lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\pc\\Downloads\\market.jpg"));
+				lblNewLabel_1.setIcon(new ImageIcon("/Users/raoufabujaber/git/UltimateTeam/UltimateTeam/src/market.jpg"));
 				lblNewLabel_1.setBounds(12, 13, 650, 347);
 				frame.getContentPane().add(lblNewLabel_1);
 				frame.setBounds(100, 100, 692, 510);
@@ -148,7 +148,7 @@ public class FirstClass {
 				frame.getContentPane().setLayout(null);
 				
 				JLabel lblNewLabel = new JLabel("New label");
-				lblNewLabel.setIcon(new ImageIcon("C:\\Users\\pc\\Downloads\\background.jpg"));
+				lblNewLabel.setIcon(new ImageIcon("/Users/raoufabujaber/git/UltimateTeam/UltimateTeam/src/background.jpg"));
 				lblNewLabel.setBounds(0, 0, 674, 463);
 				frame.getContentPane().add(lblNewLabel);
 				
@@ -205,7 +205,7 @@ public class FirstClass {
 				frame.setBounds(100, 100, 692, 510);
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				
-				ImageIcon pic1 = new ImageIcon("C:\\Users\\pc\\eclipse-workspace\\SecondTerm\\src\\mbappe.jpg");
+				ImageIcon pic1 = new ImageIcon("/Users/raoufabujaber/git/UltimateTeam/UltimateTeam/src/mbappe.jpg");
 				Image image = pic1.getImage();
 				Image newimg = image.getScaledInstance(350, 400,  java.awt.Image.SCALE_SMOOTH);
 				pic1 = new ImageIcon(newimg);
