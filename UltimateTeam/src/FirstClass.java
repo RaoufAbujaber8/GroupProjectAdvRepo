@@ -21,11 +21,13 @@ import javax.swing.JComboBox;
 public class FirstClass {
 
 	private JFrame frame;
+	JFrame frame1;
 	JLabel pic;
 	JTextField textField;
 	JTextField searchBar;
-	
+
 	public void homePage() {
+		// add background image here
 		ImageIcon x = new ImageIcon("C:\\Users\\pc\\eclipse-workspace\\SecondTerm\\src\\background.jpg");
 		Image image = x.getImage();
 		Image newimg = image.getScaledInstance(1200, 900,  java.awt.Image.SCALE_SMOOTH);
@@ -67,44 +69,91 @@ public class FirstClass {
 		frame.setBounds(100, 100, 762, 534);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
-		//home page foreground pic
+
+		JTextArea txtrCoinBalance = new JTextArea();
+		txtrCoinBalance.setFont(new Font("Mongolian Baiti", Font.BOLD, 15));
+		txtrCoinBalance.setForeground(new Color(255, 250, 250));
+		txtrCoinBalance.setText("Coin Balance: 0");
+		txtrCoinBalance.setOpaque(false);
+		txtrCoinBalance.setBounds(12, 0, 135, 22);
+		frame.getContentPane().add(txtrCoinBalance);
+
+		JLabel lblNewLabel_3 = new JLabel("New label");
+		lblNewLabel_3.setBounds(141, -3, 25, 28);
+		frame.getContentPane().add(lblNewLabel_3);
+		ImageIcon x1 = new ImageIcon("C:\\Users\\pc\\eclipse-workspace\\SecondTerm\\src\\coins.png");
+		Image image1 = x1.getImage();
+		Image newimg1 = image1.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH);
+		x1 = new ImageIcon(newimg1);
+		lblNewLabel_3.setIcon(x1);
+
+
 		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setBounds(26, 13, 692, 360);
+		lblNewLabel_2.setBounds(27, 44, 692, 360);
+
 		ImageIcon x = new ImageIcon("C:\\Users\\pc\\eclipse-workspace\\SecondTerm\\src\\home img.jpg");
 		Image image = x.getImage();
 		Image newimg = image.getScaledInstance(700, 400,  java.awt.Image.SCALE_SMOOTH);
 		x = new ImageIcon(newimg);
-		lblNewLabel_2.setIcon(x);	
+		lblNewLabel_2.setIcon(x);
+
 		frame.getContentPane().add(lblNewLabel_2);
-		
-		//home page background pic
+
 		pic = new JLabel("");
 		pic.setIcon(new ImageIcon("C:\\Users\\pc\\Downloads\\background.jpg"));
 		pic.setBounds(0, 0, 744, 417);
 		frame.getContentPane().add(pic);
-		
-		// the code that excutes when clicking the SQUAD button
+
 		JButton squad = new JButton("SQUAD");
 		squad.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				JFrame x = new JFrame();
-				ImageIcon pic1 = new ImageIcon("C:\\Users\\pc\\eclipse-workspace\\SecondTerm\\src\\formation.png");
-				Image image = pic1.getImage();
-				Image newimg = image.getScaledInstance(750, 650,  java.awt.Image.SCALE_SMOOTH);
-				pic1 = new ImageIcon(newimg);
-				pic.setIcon(pic1);
-				
-				x.getContentPane().add(pic, BorderLayout.NORTH);
-				x.setSize(750,650);
-				x.setVisible(true);
+				frame1 = new JFrame();
+				frame1.getContentPane().setBackground(new Color(135, 206, 235));
+				frame1.getContentPane().setLayout(null);
+
+				JTextArea txtrCoinBalance = new JTextArea();
+				txtrCoinBalance.setFont(new Font("Mongolian Baiti", Font.BOLD, 15));
+				txtrCoinBalance.setForeground(new Color(255, 250, 250));
+				txtrCoinBalance.setText("Coin Balance: 0");
+				txtrCoinBalance.setOpaque(false);
+				txtrCoinBalance.setBounds(12, 0, 135, 22);
+				frame1.getContentPane().add(txtrCoinBalance);
+
+				JLabel lblNewLabel_3 = new JLabel("New label");
+				lblNewLabel_3.setBounds(141, -3, 25, 28);
+				frame1.getContentPane().add(lblNewLabel_3);
+				ImageIcon x1 = new ImageIcon("C:\\Users\\pc\\eclipse-workspace\\SecondTerm\\src\\coins.png");
+				Image image1 = x1.getImage();
+				Image newimg1 = image1.getScaledInstance(20, 20,  java.awt.Image.SCALE_SMOOTH);
+				x1 = new ImageIcon(newimg1);
+				lblNewLabel_3.setIcon(x1);
+
+				JTextArea textArea = new JTextArea();
+				textArea.setBounds(39, 55, 599, 223);
+				frame1.getContentPane().add(textArea);
+
+				JTextArea textArea_1 = new JTextArea();
+				textArea_1.setBounds(39, 333, 599, 103);
+				frame1.getContentPane().add(textArea_1);
+
+				JLabel lblNewLabel = new JLabel("Starting XI");
+				lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
+				lblNewLabel.setBounds(39, 26, 154, 16);
+				frame1.getContentPane().add(lblNewLabel);
+
+				JLabel lblBench = new JLabel("Bench");
+				lblBench.setFont(new Font("Tahoma", Font.BOLD, 15));
+				lblBench.setBounds(39, 314, 154, 16);
+				frame1.getContentPane().add(lblBench);
+				frame1.setBounds(100, 100, 692, 510);
+				frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				frame1.setVisible(true);
 			}
 		});
 		squad.setBackground(new Color(255, 182, 193));
 		squad.setBounds(0, 417, 176, 70);
 		frame.getContentPane().add(squad);
-		
-		// the code that excutes when clicking the MARKET button
+
 		JButton market = new JButton("MARKET");
 		market.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -112,33 +161,32 @@ public class FirstClass {
 				frame = new JFrame();
 				frame.getContentPane().setBackground(new Color(135, 206, 235));
 				frame.getContentPane().setLayout(null);
-				
-				searchBar = new JTextField();
-				searchBar.setBounds(61, 407, 540, 31);
-				frame.getContentPane().add(searchBar);
-				searchBar.setColumns(10);
-				searchBar.setEditable(true);
-				
+
+				textField = new JTextField();
+				textField.setBounds(61, 407, 540, 31);
+				frame.getContentPane().add(textField);
+				textField.setColumns(10);
+				textField.setEditable(true);
+
 				JLabel lblNewLabel = new JLabel("Enter Player Name Below");
 				lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 16));
 				lblNewLabel.setBounds(62, 373, 233, 31);
 				frame.getContentPane().add(lblNewLabel);
-				
+
 				JLabel lblNewLabel_1 = new JLabel("New label");
 				lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\pc\\Downloads\\market.jpg"));
 				lblNewLabel_1.setBounds(12, 13, 650, 347);
 				frame.getContentPane().add(lblNewLabel_1);
 				frame.setBounds(100, 100, 692, 510);
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				
+
 				frame.setVisible(true);
 			}
 		});
 		market.setBackground(new Color(255, 182, 193));
 		market.setBounds(175, 417, 191, 70);
 		frame.getContentPane().add(market);
-		
-		// the code that excutes when clicking the STORE button
+
 		JButton store = new JButton("STORE");
 		store.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -146,15 +194,15 @@ public class FirstClass {
 				frame = new JFrame();
 				frame.getContentPane().setBackground(new Color(135, 206, 235));
 				frame.getContentPane().setLayout(null);
-				
+
 				JLabel lblNewLabel = new JLabel("New label");
 				lblNewLabel.setIcon(new ImageIcon("C:\\Users\\pc\\Downloads\\background.jpg"));
 				lblNewLabel.setBounds(0, 0, 674, 463);
 				frame.getContentPane().add(lblNewLabel);
-				
-				JComboBox dropDown = new JComboBox();
-				dropDown.setBounds(67, 205, 546, 50);
-				frame.getContentPane().add(dropDown);
+
+				JComboBox comboBox = new JComboBox();
+				comboBox.setBounds(67, 205, 546, 50);
+				frame.getContentPane().add(comboBox);
 				frame.setBounds(100, 100, 692, 510);
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				frame.setVisible(true);
@@ -163,8 +211,7 @@ public class FirstClass {
 		store.setBackground(new Color(255, 182, 193));
 		store.setBounds(365, 417, 191, 70);
 		frame.getContentPane().add(store);
-		
-		// the code that excutes when clicking the GAME button
+
 		JButton play = new JButton("GAME");
 		play.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -172,55 +219,49 @@ public class FirstClass {
 				frame = new JFrame();
 				frame.getContentPane().setBackground(new Color(135, 206, 235));
 				frame.getContentPane().setLayout(null);
-				
+
 				JLabel lblNewLabel = new JLabel("Player");
 				lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 				lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
 				lblNewLabel.setBounds(0, 0, 164, 44);
 				frame.getContentPane().add(lblNewLabel);
-				
+
+				JLabel lblGameHighlights = new JLabel("Game Highlights");
+				lblGameHighlights.setHorizontalAlignment(SwingConstants.CENTER);
+				lblGameHighlights.setFont(new Font("Tahoma", Font.BOLD, 15));
+				lblGameHighlights.setBounds(167, 45, 346, 44);
+				frame.getContentPane().add(lblGameHighlights);
+
 				JLabel lblOpponent = new JLabel("Opponent");
 				lblOpponent.setHorizontalAlignment(SwingConstants.CENTER);
 				lblOpponent.setFont(new Font("Tahoma", Font.BOLD, 15));
 				lblOpponent.setBounds(510, 0, 164, 44);
 				frame.getContentPane().add(lblOpponent);
-				
-				JTextArea playerHighlights = new JTextArea();
-				playerHighlights.setText("Display game \r\nhighlights here");
-				playerHighlights.setBackground(new Color(230, 230, 250));
-				playerHighlights.setBounds(0, 97, 164, 366);
-				playerHighlights.setEditable(false);
-				frame.getContentPane().add(playerHighlights);
-				
-				JTextArea opponentHighlights = new JTextArea();
-				opponentHighlights.setText("Display Game \r\nHighlights here");
-				opponentHighlights.setBackground(new Color(230, 230, 250));
-				opponentHighlights.setBounds(510, 97, 164, 366);
-				opponentHighlights.setEditable(false);
-				frame.getContentPane().add(opponentHighlights);
-				
+
+				JTextArea txtrDisplayGameHighlights = new JTextArea();
+				txtrDisplayGameHighlights.setText("Display game \r\nhighlights here");
+				txtrDisplayGameHighlights.setBackground(new Color(230, 230, 250));
+				txtrDisplayGameHighlights.setBounds(0, 97, 164, 366);
+				frame.getContentPane().add(txtrDisplayGameHighlights);
+
+				JTextArea txtrDisplayGameHighlights_1 = new JTextArea();
+				txtrDisplayGameHighlights_1.setText("Display Game \r\nHighlights here");
+				txtrDisplayGameHighlights_1.setBackground(new Color(230, 230, 250));
+				txtrDisplayGameHighlights_1.setBounds(510, 97, 164, 366);
+				frame.getContentPane().add(txtrDisplayGameHighlights_1);
+
 				pic = new JLabel("New label");
 				pic.setBounds(164, 97, 346, 366);
 				frame.getContentPane().add(pic);
 				frame.setBounds(100, 100, 692, 510);
 				frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				
+
 				ImageIcon pic1 = new ImageIcon("C:\\Users\\pc\\eclipse-workspace\\SecondTerm\\src\\mbappe.jpg");
 				Image image = pic1.getImage();
 				Image newimg = image.getScaledInstance(350, 400,  java.awt.Image.SCALE_SMOOTH);
 				pic1 = new ImageIcon(newimg);
 				pic.setIcon(pic1);
-				
-				JButton btnNewButton = new JButton("Sim Match");
-				btnNewButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						// add code for this button here
-					}
-				});
-				btnNewButton.setBackground(new Color(230, 230, 250));
-				btnNewButton.setBounds(242, 59, 188, 25);
-				frame.getContentPane().add(btnNewButton);
-				
+
 				frame.setVisible(true);
 			}
 		});
