@@ -20,7 +20,9 @@ import javax.swing.JComboBox;
 // Hello raouf
 public class FirstClass {
 
+	// variables
 	private JFrame frame;
+	JLabel kdk;
 	JLabel pic;
 	JTextField textField;
 	JTextField searchBar;
