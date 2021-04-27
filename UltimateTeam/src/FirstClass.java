@@ -16,11 +16,9 @@ import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 // Magableh
-//Done by Raouf April 10
-// Hello raouf
+//april 27th
 public class FirstClass {
 
-	// hhghghghfvnfn
 	private JFrame frame;
 	JLabel kdk;
 	JLabel pic;
