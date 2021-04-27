@@ -20,7 +20,7 @@ import javax.swing.JComboBox;
 // Hello raouf
 public class FirstClass {
 
-	// hhghghgh
+	// hhghghghfvnfn
 	private JFrame frame;
 	JLabel kdk;
 	JLabel pic;
